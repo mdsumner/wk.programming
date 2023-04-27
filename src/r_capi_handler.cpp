@@ -40,7 +40,7 @@ void bbox_handler_finalize(void* handler_data) {
   free(data);
 }
 
-SEXP c_bbox_handler_new() {
+extern "C" SEXP c_bbox_handler_new() {
   wk_handler_t* handler = wk_handler_create();
 
   handler->coord = &bbox_handler_coord;

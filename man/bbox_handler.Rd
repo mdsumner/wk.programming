@@ -2,9 +2,12 @@
 % Please edit documentation in R/handler.R
 \name{bbox_handler}
 \alias{bbox_handler}
+\alias{bbox_handler_c}
 \title{Mikey lurnin}
 \usage{
 bbox_handler()
+
+bbox_handler_c()
 }
 \description{
 https://paleolimbot.github.io/wk/articles/programming.html
@@ -16,7 +19,10 @@ wk_handle(
   wkt(c(NA, "POINT (0 1)", "GEOMETRYCOLLECTION (POINT (2 3))")),
   bbox_handler()
 )
-
+wk_handle(
+  wkt(c(NA, "POINT (0 1)", "GEOMETRYCOLLECTION (POINT (2 3))")),
+  bbox_handler_c()
+)
 # The most important thing about a wk_handler is that, once created, it can only be used once:
 h <- bbox_handler()
 wk_handle(wkt(), h)
@@ -27,4 +33,8 @@ handler <- function() bbox_handler()
 wk_handle(wkt(), handler)
 wk_handle(wkt(), handler)
 
+## also written without cpp11 (as per the wk/vignettes/articles/)
+## ... but not registered yet
+#ch <- bbox_handler_c()
+#wk_handle(wkt(), ch)
 }

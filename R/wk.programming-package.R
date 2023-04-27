@@ -2,6 +2,6 @@
 "_PACKAGE"
 
 ## usethis namespace: start
-#' @useDynLib wkmds, .registration = TRUE
+#' @useDynLib wk.programming, .registration = TRUE
 ## usethis namespace: end
 NULL

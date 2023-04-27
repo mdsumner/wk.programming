@@ -12,7 +12,10 @@
 #'   wkt(c(NA, "POINT (0 1)", "GEOMETRYCOLLECTION (POINT (2 3))")),
 #'   bbox_handler()
 #' )
-#'
+#' wk_handle(
+#'   wkt(c(NA, "POINT (0 1)", "GEOMETRYCOLLECTION (POINT (2 3))")),
+#'   bbox_handler_c()
+#' )
 #' # The most important thing about a wk_handler is that, once created, it can only be used once:
 #' h <- bbox_handler()
 #' wk_handle(wkt(), h)
@@ -31,7 +34,8 @@ bbox_handler <- function() {
   wk::new_wk_handler(cpp_bbox_handler_new(), "bbox_wk_handler")
 }
 
-
+#' @name bbox_handler
+#' @export
 bbox_handler_c <- function() {
   new_wk_handler(.Call("c_bbox_handler_new"))
 }
