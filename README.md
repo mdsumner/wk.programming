@@ -4,10 +4,12 @@
 # wk.programming
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/mdsumner/wk.programming/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mdsumner/wk.programming/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of wkmds is to learn about cpp and the R C API and programming
-with the awesome {wk}.
+The goal of wk.programming is to learn about cpp and the R C API and
+programming with the awesome {wk}.
 
 See also
 

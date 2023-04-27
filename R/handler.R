@@ -2,7 +2,7 @@
 #' Mikey lurnin
 #'
 #' https://paleolimbot.github.io/wk/articles/programming.html
-#' @return
+#' @return handler
 #' @export
 #' @importFrom wk new_wk_handler
 #' @examples
